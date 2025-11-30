@@ -108,3 +108,14 @@ elif opcao_escolhida == 3:
 else:
     print('Encerrando o programa.')
 ```
+## Tipo int e str
+A função `type` mostra o tipo de valor da variável:
+```python
+print(type(input("Entrada: "))) # retorna <class 'str' >
+print(type(1)) # retorna <class 'int' >
+```
+
+Para converter uma string para inteiro, use a função `int`:
+```python
+opcao_escolhida = int(input('Escolha uma opção: '))
+```

@@ -40,3 +40,22 @@ print('2. Listar restaurante')
 print('3. Ativar restaurante')
 print('4. Sair')
 ```
+
+## Boas práticas
+Em Python, usamos os seguintes padrões:
+
+1.  `snake_case` para variáveis;
+2. `PascalCase` para classes;
+3. `SCREAMING_SNAKE_CASE` para constantes.
+
+Código atualizado do arquivo `app.py`:
+```python
+# app.py
+print('Sabor Express\n')
+
+# Resto do código
+
+opcao_escolhida = int(input('Escolha uma opção: '))
+
+print('Opção escolhida:',  opcao_escolhida)
+```

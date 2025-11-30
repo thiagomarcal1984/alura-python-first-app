@@ -93,3 +93,18 @@ opcao_escolhida = int(input('Escolha uma opção: '))
 # Perceba a interpolação de variável com a f-string.
 print(f'Opção escolhida: {opcao_escolhida}')
 ```
+# Módulos e funções
+## If else
+Blocos de if..elif..else no Python:
+
+```python
+# app.py
+if opcao_escolhida == 1:
+    print('Cadastrar restaurante')
+elif opcao_escolhida == 2:
+    print('Listar restaurantes')
+elif opcao_escolhida == 3:
+    print('Ativar restaurante')
+else:
+    print('Encerrando o programa.')
+```

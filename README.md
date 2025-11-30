@@ -59,3 +59,37 @@ opcao_escolhida = int(input('Escolha uma opção: '))
 
 print('Opção escolhida:',  opcao_escolhida)
 ```
+## Interpolação de String
+Aspas triplas para criar strings grandes com quebras de linha.
+
+> Visite o site https://fsymbols.com/ para criar textos formatados para linha de comando.
+
+É possível usar strings formatadas (as chamadas f-strings). Para isso, prefixe a string com a letra `f` e depois interpole variáveis/retornos de função usando chaves para chamar a variável/função. Por exemplo: 
+```python
+print(f'Opção escolhida: {opcao_escolhida}')
+```
+
+Mudança no arquivo `app.py`:
+
+```python
+# Perceba as aspas triplas com quebras de página.
+print("""
+
+░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
+██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
+╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
+░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
+██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
+╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
+      
+1. Cadastrar restaurante
+2. Listar restaurante
+3. Ativar restaurante
+4. Sair
+""")
+
+opcao_escolhida = int(input('Escolha uma opção: '))
+
+# Perceba a interpolação de variável com a f-string.
+print(f'Opção escolhida: {opcao_escolhida}')
+```

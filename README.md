@@ -119,3 +119,29 @@ Para converter uma string para inteiro, use a função `int`:
 ```python
 opcao_escolhida = int(input('Escolha uma opção: '))
 ```
+
+## Funções e import
+Para definir funções no Python, use:
+```python
+def funcao():
+    comandos
+```
+
+Para importar uma biblioteca (por exemplo, a de interação com o sistema operacional) use a palavra reservada `import` seguida da biblioteca que você deseja importar:
+```python
+import os
+```
+
+Código do arquivo `app.py`:
+
+```python
+# Resto do código
+def finalizar_app():
+    os.system('cls') # Use 'clear' para Linux/Mac
+    print('Finalizando o app.\n')
+    
+if opcao_escolhida == 1:
+    # Resto do código
+else:
+    finalizar_app()
+```

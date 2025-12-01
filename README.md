@@ -215,3 +215,80 @@ def escolher_opcao():
             finalizar_app()
 # Resto do código
 ```
+## Hora da prática: condicionais
+```python
+def par_impar():
+    """
+    1 - Solicite ao usuário que insira um número e, em seguida, use uma 
+    estrutura if else para determinar se o número é par ou ímpar.
+    """
+    numero = int(input('Digite um número inteiro: '))
+    if numero % 2 == 0:
+        print(f'O número {numero} é par.')
+    else:
+        print(f'O número {numero} é ímpar.')
+
+def classificar_idade():
+    """
+    2 - Peça ao usuário para inserir sua idade e use uma estrutura if, elif,
+    else para classificar a pessoa como "Criança" (0-11 anos), "Adolescente" 
+    (12-17 anos) ou "Adulto" (18 anos ou mais).
+    """
+    idade = int(input('Digite sua idade: '))
+    if idade < 12:
+        print('Criança')
+    elif 12 <= idade < 18:
+        print('Adolescente')
+    elif idade >= 18:
+        print('Adulto')
+    else:
+        print('Valor inválido')
+
+def login():
+    """
+    3 - Solicite um nome de usuário e uma senha e use uma estrutura if else 
+    para verificar se o nome de usuário e a senha fornecidos correspondem aos 
+    valores esperados determinados por você.
+    """
+    usuario = input('Digite o nome de usuário: ')
+    senha = input('Digite a senha: ')
+    nome_esperado = 'admin'
+    senha_esperada = '1234'
+
+    if usuario == nome_esperado and senha == senha_esperada:
+        print('Acesso concedido.')
+    else:
+        print('Acesso negado.')
+
+def quadrantes():
+    """
+    4 - Solicite ao usuário as coordenadas (x, y) de um ponto qualquer e 
+    utilize uma estrutura if elif else para determinar em qual quadrante do 
+    plano cartesiano o ponto se encontra de acordo com as seguintes condições:
+    - Primeiro Quadrante: os valores de x e y devem ser maiores que zero;
+    - Segundo Quadrante: o valor de x < 0 e o valor de y > 0;
+    - Terceiro Quadrante: os valores de x e y devem ser menores que zero;
+    - Quarto Quadrante: o valor de x < 0 e o valor de y < 0;
+    - Caso contrário: o ponto está localizado no eixo ou origem.
+    """
+    x = float(input("Digite a coordenada x: "))
+    y = float(input("Digite a coordenada y: "))
+
+    if x > 0 and y > 0:
+        print('Primeiro quadrante')
+    elif x < 0 and y > 0:
+        print('Segundo quadrante')
+    elif x < 0 and y < 0:
+        print('Terceiro quadrante')
+    elif x > 0 and y < 0:
+        print('Quarto quadrante')
+    else:
+        print('O ponto está localizado no eixo ou origem.')
+
+
+if __name__ == '__main__':
+    # par_impar() #1
+    # classificar_idade() #2
+    # login() #3
+    quadrantes() #4
+```

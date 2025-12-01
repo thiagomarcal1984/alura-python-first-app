@@ -346,3 +346,20 @@ def cadastrar_novo_restaurante():
 
 # Resto do código
 ```
+## Laço de repetição for
+Foco nas iterações com for:
+```python
+for item in lista:
+    print(item)
+```
+Mudanças no arquivo `app.py`:
+```python
+def listar_restaurantes():
+    os.system('cls')
+    print('Listandoo os restaurantes:\n')
+    for restaurante in restaurantes:
+        print(f'. {restaurante}')
+    input('\nDigite ENTER para voltar ao menu principal...')
+    os.system('cls')
+    main()
+```

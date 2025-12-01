@@ -363,3 +363,36 @@ def listar_restaurantes():
     os.system('cls')
     main()
 ```
+## Refatorando o código
+Há código duplicado nos títulos e na mensagem "Digite ENTER para voltar...". Então, para facilitar a manutenção desses códigos semelhantes, vamos modularizá-los em funções distintas:
+
+```python
+# Resto do código
+def voltar_ao_menu_principal():
+    input('\nDigite ENTER para voltar ao menu...')
+    os.system('cls')
+    main()
+
+def exibir_subtitulo(texto):
+    os.system('cls')
+    print(texto)
+    print()
+# Resto do código
+```
+As chamadas dessas funções nas funções de cada opção do menu são estas:
+```python
+def opcao_invalida():
+    print('Opção inválida! Tente novamente.')
+    voltar_ao_menu_principal()
+
+def cadastrar_novo_restaurante():
+    exibir_subtitulo('Cadastro de novo restaurante')
+    # Resto do código
+    voltar_ao_menu_principal()
+
+def listar_restaurantes():
+    exibir_subtitulo('Listando os restaurantes:')
+    for restaurante in restaurantes:
+        print(f'. {restaurante}')
+    voltar_ao_menu_principal()
+```

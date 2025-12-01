@@ -292,3 +292,29 @@ if __name__ == '__main__':
     # login() #3
     quadrantes() #4
 ```
+
+# Listas, laços e exceções
+## Try except
+Foco na sintaxe do `try... except`:
+
+```python
+try:
+    # Código que pode lançar exceção.
+except:
+    # Código do tratamento da exceção.
+```
+> Note que o tipo de exceção não precisa ser declarado depois de `except`, embora seja recomendado.
+
+Mudanças no código de `app.py`:
+```python
+# Resto do código
+def escolher_opcao():    
+    try:
+        opcao_escolhida = int(input('Escolha uma opção: '))
+        print(f'Opção escolhida: {opcao_escolhida}')
+
+        # Resto do código
+    except:
+        opcao_invalida()
+# Resto do código
+```

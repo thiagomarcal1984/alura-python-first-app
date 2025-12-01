@@ -23,20 +23,31 @@ def finalizar_app():
     os.system('cls') # Use 'clear' para Linux/Mac
     print('Finalizando o app.\n')
 
+def opcao_invalida():
+    print('Opção inválida! Tente novamente.')
+    input('Digite ENTER para continuar...')
+    os.system('cls')
+    main()
+
 def escolher_opcao():    
-    opcao_escolhida = int(input('Escolha uma opção: '))
+    try:
+        opcao_escolhida = int(input('Escolha uma opção: '))
+        print(f'Opção escolhida: {opcao_escolhida}')
 
-    print(f'Opção escolhida: {opcao_escolhida}')
+        match opcao_escolhida:
+            case 1:
+                print('Cadastrar restaurante')
+            case 2:
+                print('Listar restaurantes')
+            case 3:
+                print('Ativar restaurante')
+            case 4:
+                finalizar_app()
+            case _:
+                opcao_invalida()
+    except:
+        opcao_invalida()
 
-    match opcao_escolhida:
-        case 1:
-            print('Cadastrar restaurante')
-        case 2:
-            print('Listar restaurantes')
-        case 3:
-            print('Ativar restaurante')
-        case _:
-            finalizar_app()
 
 def main():
     exibir_nome_do_programa()

@@ -318,3 +318,31 @@ def escolher_opcao():
         opcao_invalida()
 # Resto do código
 ```
+## Listas
+Foco no comando de acréscimo de elementos na lista (método `append` da lista):
+
+```python
+minha_lista = []
+lista.append('Novo item')
+print(lista) 
+# Resultado: 
+# ['Novo item']
+```
+Mudanças no arquivo `app.py`:
+```python
+# Resto do código
+restaurantes = []
+
+# Resto do código
+def cadastrar_novo_restaurante():
+    os.system('cls')
+    print('Cadastro de novo restaurante\n')
+    nome_restaurante = input('Digite o nome do restaurante: ')
+    restaurantes.append(nome_restaurante)
+    print(f'Restaurante "{nome_restaurante}" cadastrado com sucesso!')
+    input('Digite ENTER para voltar ao menu principal...')
+    os.system('cls')
+    main()
+
+# Resto do código
+```

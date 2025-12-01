@@ -180,3 +180,38 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+## Para saber mais: instrução match
+A partir da versão 3.10 do Python surgiu a instrução `match`, que funciona como o switch/case de outras linguagens.
+
+De acordo com a documentação, a instrução tem a seguinte sintaxe: 
+
+```python
+match status:
+    case 400:
+        print("Bad request")
+    case 404:
+        print("Not found")
+    case 418:
+        print("I'm a teapot")
+    case _: # Opção default
+        print("Something's wrong with the internet")
+```
+O código do arquivo `app.py` foi modificado para usar a instrução `match`:
+```python
+# Resto do código
+def escolher_opcao():    
+    opcao_escolhida = int(input('Escolha uma opção: '))
+
+    print(f'Opção escolhida: {opcao_escolhida}')
+
+    match opcao_escolhida:
+        case 1:
+            print('Cadastrar restaurante')
+        case 2:
+            print('Listar restaurantes')
+        case 3:
+            print('Ativar restaurante')
+        case _:
+            finalizar_app()
+# Resto do código
+```

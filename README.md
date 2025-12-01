@@ -145,3 +145,38 @@ if opcao_escolhida == 1:
 else:
     finalizar_app()
 ```
+
+## Aprofundando em funções
+Primeiro: o Python usa o dunder `__name__` para armazenar o nome do módulo importado. Se o módulo não tiver sido importado, então o returno do dunder `__name__` é a string `__main__`. Isso facilita a identificação do programa principal e evita sua execução caso o arquivo do programa principal seja importado.
+
+Veja o código: 
+```Python
+if __name__ == '__main__':
+    main()
+```
+Note que dentro do bloco `if` é chamada a função `main`, que contém a lógica do programa principal.
+
+O código do arquivo `app.py` foi modularizado em diferentes funções, para melhorar a legibilidade:
+```python
+import os 
+
+def exibir_nome_do_programa():
+    # Resto do código
+
+def exibir_opcoes():
+    # Resto do código
+
+def finalizar_app():
+    # Resto do código
+
+def escolher_opcao():    
+    # Resto do código
+
+def main():
+    exibir_nome_do_programa()
+    exibir_opcoes()
+    escolher_opcao()
+
+if __name__ == '__main__':
+    main()
+```

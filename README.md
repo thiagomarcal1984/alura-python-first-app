@@ -396,3 +396,34 @@ def listar_restaurantes():
         print(f'. {restaurante}')
     voltar_ao_menu_principal()
 ```
+# Dicionários
+## Dicionários
+Dicionários em Python pode ser uma forma de simular um "registro" (uma estrutura de dados complexa).
+
+Exemplo de um dicionário: 
+```python
+# Perceba as chaves como forma de declarar o dicionário.
+# Chave e valor podem ser de qualquer outro tipo de dados primitivo.
+objeto = { 'nome': 'Praça', 'categoria' : 'Japonesa', 'ativo' : False }
+```
+
+Mudanças em `app.py`:
+```python
+# Resto do código
+restaurantes = [
+    { 'nome': 'Praça', 'categoria' : 'Japonesa', 'ativo' : False },
+    { 'nome': 'Pizza Suprema', 'categoria' : 'Pizza', 'ativo' : True },
+    { 'nome': 'Cantina', 'categoria' : 'Italiano', 'ativo' : False },
+]
+# Resto do código
+
+# Para retornar o valor, use a sintaxe `dicionario[chave]`.
+def listar_restaurantes():
+    exibir_subtitulo('Listando os restaurantes:')
+    for restaurante in restaurantes:
+        nome_restaurante = restaurante['nome']
+        categoria_restaurante = restaurante['categoria']
+        ativo = restaurante["ativo"]
+        print(f'. {nome_restaurante} | Categoria: {categoria_restaurante} | Ativo: {ativo}')
+# Resto do código
+```

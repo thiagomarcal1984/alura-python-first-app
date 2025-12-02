@@ -427,3 +427,20 @@ def listar_restaurantes():
         print(f'. {nome_restaurante} | Categoria: {categoria_restaurante} | Ativo: {ativo}')
 # Resto do código
 ```
+## Atualizando o cadastro
+Vamos agora atualizar a função `cadastrar_novo_restaurante` para incluir um dicionário como elemento na lista de restaurantes:
+```python
+# Resto do código
+def cadastrar_novo_restaurante():
+    exibir_subtitulo('Cadastro de novo restaurante')
+    nome_restaurante = input('Digite o nome do restaurante: ')
+    categoria_restaurante = input(f'Digite a categoria do restaurante "{nome_restaurante}": ')
+    dados_do_restaurante = { # Início do dicionário
+        'nome': nome_restaurante,
+        'categoria': categoria_restaurante,
+        'ativo': False,
+    } # Fim do dicionário.
+    restaurantes.append(dados_do_restaurante)
+    print(f'Restaurante "{nome_restaurante}" cadastrado com sucesso!')
+# Resto do código
+```

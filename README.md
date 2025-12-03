@@ -468,3 +468,33 @@ def alternar_estado_restaurante():
     voltar_ao_menu_principal()
 # Resto do código 
 ```
+## Melhorando a visualização
+1. Vamos colocar um operador ternário para exibir as palavras `ativado` ou `desativado` na lista de restaurantes;
+2. Vamos também tabular a exibição dessa lista usando a função `ljust` das strings;
+3. Finalmente, vamos enfeitar os subtítulos alterando a função `exibir_subtitulo`.
+
+```python
+# Resto do código
+def exibir_subtitulo(texto):
+    os.system('cls')
+    # Acrescentando asteriscos antes e depois do texto do subtítulo:
+    linha = '*' * len(texto)
+    print(linha)
+    print(texto)
+    print(linha)
+    print()
+
+# Resto do código
+def listar_restaurantes():
+    exibir_subtitulo('Listando os restaurantes')
+    # Imprimindo o cabeçalho da tabela e espaçando com o método ljust:
+    print(f'{"Nome Restaurante".ljust(22)} | {"Categoria".ljust(20)} | {"Status"}')
+    for restaurante in restaurantes:
+        nome_restaurante = restaurante['nome']
+        categoria_restaurante = restaurante['categoria']
+        ativo = 'ativado' if restaurante["ativo"] else 'desativado'
+        # Tabulando os dados com ljust:
+        print(f'- {nome_restaurante.ljust(20)} | {categoria_restaurante.ljust(20)} | {ativo}')
+    voltar_ao_menu_principal()
+# Resto do código
+```

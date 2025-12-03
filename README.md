@@ -444,3 +444,27 @@ def cadastrar_novo_restaurante():
     print(f'Restaurante "{nome_restaurante}" cadastrado com sucesso!')
 # Resto do código
 ```
+## Ativando restaurantes
+O foco é atribuição de valores booleanos. Comandos do tipo liga/desliga podem usar negação de valores booleanos (`not variavel_booleana`). Outra coisa é o uso de operadores ternários:
+```python
+n = 3
+print('par' if n % 2 == 0 else 'ímpar')
+```
+Mudanças no código de `app.py`:
+```python
+# Resto do código
+def alternar_estado_restaurante():
+    exibir_subtitulo('Alternando estado do restaurante')
+    nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
+    restaurante_encontrado = False
+    for restaurante in restaurantes:
+        if restaurante['nome'].lower() == nome_restaurante.lower():
+            restaurante_encontrado = True
+            restaurante['ativo'] = not restaurante['ativo']
+            estado_atual = 'ativo' if restaurante['ativo'] else 'inativo'
+            print(f'O restaurante "{restaurante["nome"]}" agora está {estado_atual}.')
+    if not restaurante_encontrado:
+        print(f'Restaurante "{nome_restaurante}" não encontrado.')
+    voltar_ao_menu_principal()
+# Resto do código 
+```

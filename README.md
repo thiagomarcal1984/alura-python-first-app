@@ -519,3 +519,19 @@ def cadastrar_novo_restaurante():
     '''
     # Resto do código
 ```
+## Afro Python - Resolvendo
+Esta aula mostra que a docstring pode conter as entradas e saídas usadas dentro da função. Veja o código do arquivo `app.py`:
+```python
+def cadastrar_novo_restaurante():
+    '''
+    Esta função é responsável por cadastrar um novo restaurante.
+
+    Inputs:
+    - Nome do restaurante
+    - Categoria
+
+    Outputs:
+    - Adiciona um novo restaurante à lista de restaurantes
+    '''
+    # Resto do código
+```

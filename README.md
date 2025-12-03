@@ -498,3 +498,24 @@ def listar_restaurantes():
     voltar_ao_menu_principal()
 # Resto do código
 ```
+# Consolidando os conhecimentos
+## Afro Python - Apresentação
+Esta aula ensina como criar docstrings para documentar suas funções. Basta colocar na primeira linha depois da declaração da função um texto envolvido por aspas triplas.
+
+Sintaxe:
+```python
+def somar(a, b):
+    '''
+    Retorna a soma da variável `a` com a variável `b`
+    '''
+    return a + b
+```
+
+Mudanças em `app.py`:
+```python
+def cadastrar_novo_restaurante():
+    '''
+    Esta função é responsável por cadastrar um novo restaurante.
+    '''
+    # Resto do código
+```
